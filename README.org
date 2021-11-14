@@ -1,6 +1,11 @@
 * geml
 Gemini server written in Common Lisp
 
+** Usage
+#+begin_src lisp
+(gemini.server:start-server "ssl.crt" "rsa.key")
+#+end_src
+
 ** Generate Self-Signed SSL Certificate
 #+begin_src sh
 openssl req -x509 -out localhost.crt -keyout localhost.key -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' -extensions EXT \
